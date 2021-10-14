@@ -33,7 +33,7 @@ public class WidocoController implements Initializable {
        
        String printString = "";
        for (int i = 1; i <= setup; i++) {
-    	   printString = i + ".\n" + printString;
+    	   printString = printString + i + ".\n";
        }
        
         // Show in VIEW
@@ -47,8 +47,8 @@ public class WidocoController implements Initializable {
        removeSetup();
        
        String printString = "";
-       for (int i = 2; 1 <= setup; i++) {
-    	   printString = i + ".\n" + printString;
+       for (int i = 1; i <= setup; i++) {
+    	   printString = printString + i + ".\n";
        }
         // Show in VIEW
        setupField.setText(printString);
