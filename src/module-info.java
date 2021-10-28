@@ -1,9 +1,9 @@
-module WidocoGui {
+module widocogui {
+	requires transitive javafx.graphics;
 	requires javafx.controls;
 	requires javafx.fxml;
-	requires transitive javafx.graphics;
 	
-	opens application to javafx.graphics, javafx.fxml;
+	opens org.openjfx to javafx.fxml;
 	
-	exports application;
+	exports org.openjfx;
 }
