@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
 <?import javafx.scene.control.*?>
@@ -9,8 +11,8 @@
 
 <AnchorPane prefHeight="368.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.widocoui.WidocoController">
    <children>
-      <Button id="nextButton" fx:id="nextButton" defaultButton="true" layoutX="303.0" layoutY="331.0" mnemonicParsing="false" onAction="#nextEvent" text="Siguiente" />
-      <Button id="prevButton" fx:id="prevButton" layoutX="228.0" layoutY="331.0" mnemonicParsing="false" onAction="#prevEvent" text="Anterior" />
-      <TextArea id="setupField" fx:id="setupField" editable="false" layoutX="14.0" layoutY="15.0" prefHeight="338.0" prefWidth="82.0" />
+      <Button id="nextButton" fx:id="nextButton" defaultButton="true" layoutX="302.0" layoutY="331.0" mnemonicParsing="false" onAction="#nextEvent" text="Siguiente" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Button id="prevButton" fx:id="prevButton" layoutX="227.0" layoutY="331.0" mnemonicParsing="false" onAction="#prevEvent" text="Anterior" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="95.0" />
+      <TextArea fx:id="setupField" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
