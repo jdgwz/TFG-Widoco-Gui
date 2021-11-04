@@ -76,13 +76,25 @@ public class WidocoController implements Initializable {
    }
 
    public void printSetup() {
+	   if (setup == 1) {
+		   prevButton.setVisible(false);
+	   } else {
+		   prevButton.setVisible(true);
+	   }
+	   
+	   if (setup == 5) {
+		   nextButton.setText("Finalizar");
+	   } else {
+		   nextButton.setText("Siguiente");
+	   }
+	   
+	   
        String printString = "";
        for (int i = 1; i <= setup; i++) {
     	   printString = printString + i + ".\n";
        }
         // Show in VIEW
        setupField.setText(printString);
-
    }
 
 	private void addSetup() {

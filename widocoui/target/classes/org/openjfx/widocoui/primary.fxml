@@ -11,8 +11,8 @@
 
 <AnchorPane prefHeight="368.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.widocoui.WidocoController">
    <children>
-      <Button id="nextButton" fx:id="nextButton" defaultButton="true" layoutX="302.0" layoutY="331.0" mnemonicParsing="false" onAction="#nextEvent" text="Siguiente" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-      <Button id="prevButton" fx:id="prevButton" layoutX="227.0" layoutY="331.0" mnemonicParsing="false" onAction="#prevEvent" text="Anterior" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="95.0" />
+      <Button id="nextButton" fx:id="nextButton" defaultButton="true" layoutX="302.0" layoutY="331.0" mnemonicParsing="false" onAction="#nextEvent" prefWidth="76.0" text="Siguiente" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Button id="prevButton" fx:id="prevButton" layoutX="227.0" layoutY="331.0" mnemonicParsing="false" onAction="#prevEvent" prefWidth="76.0" text="Anterior" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="95.0" />
       <TextArea fx:id="setupField" layoutX="172.0" layoutY="14.0" prefHeight="286.0" prefWidth="200.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
       <Button fx:id="setup1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#event1" prefHeight="45.0" prefWidth="120.0" text="Paso 1" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
       <Button fx:id="setup2" layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#event2" prefHeight="45.0" prefWidth="120.0" text="Paso 2" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="73.0" />
