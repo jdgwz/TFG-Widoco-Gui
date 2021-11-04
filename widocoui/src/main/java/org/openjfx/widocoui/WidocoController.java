@@ -12,7 +12,7 @@ import javafx.scene.control.TextArea;
 public class WidocoController implements Initializable {
 
    @FXML
-   private Button nextButton,prevButton;
+   private Button nextButton,prevButton,setup1,setup2,setup3,setup4,setup5;
 
    @FXML
    private TextArea setupField;
@@ -30,22 +30,52 @@ public class WidocoController implements Initializable {
        System.out.println("Next Button Clicked!");
 
        addSetup();
-       
-       String printString = "";
-       for (int i = 1; i <= setup; i++) {
-    	   printString = printString + i + ".\n";
-       }
-       
-        // Show in VIEW
-       setupField.setText(printString);
-
+       printSetup();
    }
 
    public void prevEvent(ActionEvent event) {
        System.out.println("Prev Button Clicked!");
 
        removeSetup();
-       
+       printSetup();
+   }
+
+   public void event1(ActionEvent event) {
+       System.out.println("Button 1 Clicked!");
+
+       setup = 1;
+       printSetup();
+   }
+
+   public void event2(ActionEvent event) {
+       System.out.println("Button 2 Clicked!");
+
+       setup = 2;
+       printSetup();
+   }
+
+   public void event3(ActionEvent event) {
+       System.out.println("Button 3 Clicked!");
+
+       setup = 3;
+       printSetup();
+   }
+
+   public void event4(ActionEvent event) {
+       System.out.println("Button 4 Clicked!");
+
+       setup = 4;
+       printSetup();
+   }
+
+   public void event5(ActionEvent event) {
+       System.out.println("Button 5 Clicked!");
+
+       setup = 5;
+       printSetup();
+   }
+
+   public void printSetup() {
        String printString = "";
        for (int i = 1; i <= setup; i++) {
     	   printString = printString + i + ".\n";
