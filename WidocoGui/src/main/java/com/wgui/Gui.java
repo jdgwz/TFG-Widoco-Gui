@@ -22,9 +22,11 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class Gui extends JFrame {
 
 	private JPanel contentPanel;
+	@SuppressWarnings("unused")
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTextField projectNameField_1;
 	private JTextField createFromURLField;
@@ -60,7 +62,7 @@ public class Gui extends JFrame {
 		final CardLayout layout = new CardLayout(0, 0);
 		contentPanel.setLayout(layout);
 		
-		ImageIcon headIcon = new ImageIcon("src\\main\\resources\\Images\\widoco.png");
+		ImageIcon headIcon = new ImageIcon(this.getClass().getClassLoader().getResource("images/widoco.png"));
 		
 		JPanel panel1 = new JPanel();
 		panel1.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -129,7 +131,7 @@ public class Gui extends JFrame {
 		JSeparator separator2 = new JSeparator();
 		
 		projectNameField = new JTextField();
-		projectNameField.setText("C:\\Users\\Loyin\\Downloads\\myDocumentation");
+		projectNameField.setText("C:\\Users\\FilePlace\\myDocumentation");
 		projectNameField.setEditable(false);
 		projectNameField.setColumns(10);
 		
