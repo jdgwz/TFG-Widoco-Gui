@@ -2,4 +2,4 @@
 
 GUi created by JAVA FX
 
-|Using JavaFX SDK: https://gluonhq.com/products/javafx/
+https://docs.google.com/document/d/1buRBoXoWAWIUqTjpBbPV1XY-FCLS3tRR9pSGp-pEgv4/edit
