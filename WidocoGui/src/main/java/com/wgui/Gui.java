@@ -22,10 +22,12 @@ import javax.swing.ButtonGroup;
 import java.awt.Color;
 import java.awt.CardLayout;
 import javax.swing.ImageIcon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Gui extends JFrame {
 
-	private JPanel contentPane;
+	private JPanel contentPanel;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTextField projectNameField_1;
 	private JTextField createFromURLField;
@@ -55,10 +57,11 @@ public class Gui extends JFrame {
 		setTitle("Step 1");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 625, 400);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(new CardLayout(0, 0));
+		contentPanel = new JPanel();
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPanel);
+		final CardLayout layout = new CardLayout(0, 0);
+		contentPanel.setLayout(layout);
 		
 		ImageIcon headIcon = new ImageIcon("src\\main\\resources\\Images\\widoco.png");
 		
@@ -68,8 +71,20 @@ public class Gui extends JFrame {
 		JSeparator separator1 = new JSeparator();
 		
 		JButton nextButton = new JButton("Next >");
+		nextButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				layout.next(contentPanel);
+			}
+		});
 		
 		JButton cancelButton = new JButton("Cancel");
+		cancelButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.exit(0);
+			}
+		});
 		
 		JTextPane setupField = new JTextPane();
 		setupField.setText("1. Select template \n2. Load metadata \n3. Load sections \n4. Finish");
@@ -212,25 +227,117 @@ public class Gui extends JFrame {
 					.addGap(0))
 		);
 		panel1.setLayout(gl_panel1);
-		contentPane.add(panel1, "name_56571641381500");
+		contentPanel.add(panel1, "name_56571641381500");
 		
 		JPanel panel4 = new JPanel();
-		contentPane.add(panel4, "name_56874771941700");
+		contentPanel.add(panel4, "name_56874771941700");
+		
+		JLabel lblNewLabel = new JLabel("You are done!");
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		
 		JLabel headImage_1 = new JLabel();
+		headImage_1.setIcon(headIcon);
 		headImage_1.setBackground(Color.WHITE);
+		
+		JSeparator separator = new JSeparator();
+		
+		JLabel lblNewLabel_1 = new JLabel("The documentation was generated successfully. Now you can:\n");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
+		
+		JLabel lblNewLabel_2 = new JLabel("View the ontology documentation in your Web browser\n");
+		lblNewLabel_2.setForeground(Color.BLUE);
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 15));
+		
+		JLabel setupLabel_1 = new JLabel("Steps");
+		setupLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
+		setupLabel_1.setFont(new Font("Arial", Font.BOLD, 20));
+		
+		JTextPane setupField_1 = new JTextPane();
+		setupField_1.setText("1. Select template \n2. Load metadata \n3. Load sections \n4. Finish");
+		
+		JSeparator separator_1 = new JSeparator();
+		
+		JButton btnRestart = new JButton("Restart");
+		btnRestart.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				layout.next(contentPanel);
+			}
+		});
+		
+		JButton btnFinish = new JButton("Finish");
+		btnFinish.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.exit(0);
+			}
+		});
 		GroupLayout gl_panel4 = new GroupLayout(panel4);
 		gl_panel4.setHorizontalGroup(
 			gl_panel4.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel4.createSequentialGroup()
-					.addComponent(headImage_1, GroupLayout.PREFERRED_SIZE, 153, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(446, Short.MAX_VALUE))
+					.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel4.createSequentialGroup()
+							.addComponent(setupLabel_1)
+							.addPreferredGap(ComponentPlacement.RELATED))
+						.addGroup(Alignment.TRAILING, gl_panel4.createSequentialGroup()
+							.addGroup(gl_panel4.createParallelGroup(Alignment.TRAILING)
+								.addComponent(setupField_1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+								.addComponent(headImage_1, GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
+							.addPreferredGap(ComponentPlacement.RELATED)))
+					.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel4.createSequentialGroup()
+							.addGap(7)
+							.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_panel4.createSequentialGroup()
+									.addComponent(lblNewLabel)
+									.addGap(348))
+								.addComponent(separator, GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE))
+							.addGap(0))
+						.addGroup(gl_panel4.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_panel4.createSequentialGroup()
+									.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addGap(1))
+								.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+							.addGap(101))))
+				.addGroup(Alignment.TRAILING, gl_panel4.createSequentialGroup()
+					.addContainerGap(393, Short.MAX_VALUE)
+					.addComponent(btnRestart)
+					.addGap(10)
+					.addComponent(btnFinish)
+					.addContainerGap())
+				.addGroup(Alignment.TRAILING, gl_panel4.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(separator_1, GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
+					.addContainerGap())
 		);
 		gl_panel4.setVerticalGroup(
 			gl_panel4.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel4.createSequentialGroup()
-					.addComponent(headImage_1, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(290, Short.MAX_VALUE))
+					.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel4.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(lblNewLabel)
+							.addGap(18)
+							.addComponent(separator, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(headImage_1, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblNewLabel_1)
+						.addComponent(setupLabel_1, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblNewLabel_2)
+						.addComponent(setupField_1, GroupLayout.PREFERRED_SIZE, 183, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 2, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel4.createParallelGroup(Alignment.LEADING)
+						.addComponent(btnRestart)
+						.addComponent(btnFinish))
+					.addContainerGap())
 		);
 		panel4.setLayout(gl_panel4);
 	}
