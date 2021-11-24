@@ -13,8 +13,8 @@ public class WguiApplication {
 		SpringApplication.run(WguiApplication.class, args);
 	}
 
-    @RequestMapping("/index")
-    public String index(){
-        return "home";
-    }
+	@RequestMapping("/index")
+	public String index() {
+		return "home";
+	}
 }
