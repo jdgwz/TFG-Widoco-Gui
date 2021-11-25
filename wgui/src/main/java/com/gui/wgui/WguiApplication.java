@@ -17,4 +17,9 @@ public class WguiApplication {
 	public String index() {
 		return "home";
 	}
+
+	@RequestMapping("/finish")
+	public String finish() {
+		return "finish";
+	}
 }
