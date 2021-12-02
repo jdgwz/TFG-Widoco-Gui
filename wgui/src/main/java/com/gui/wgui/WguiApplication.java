@@ -22,4 +22,14 @@ public class WguiApplication {
 	public String finish() {
 		return "finish";
 	}
+
+	@RequestMapping("/metadata")
+	public String metadata() {
+		return "metadata";
+	}
+
+	@RequestMapping("/sections")
+	public String sections() {
+		return "sections";
+	}
 }

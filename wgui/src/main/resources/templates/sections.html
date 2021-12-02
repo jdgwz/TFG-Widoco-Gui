@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Widoco</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+		<script src="html5shiv/html5shiv.min.js"></script>
+		<script src="Respond/respond.min.js"></script>
+        <![endif]-->
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    
+    <body>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="block-content collapse in">
+                                <div class="span4" style="float:left;">
+									<a href="#"><img src="brand.png"></a>
+								</div>
+                                <div class="span8" style="float:left;">
+									<h4>Step 3: Load Sections.
+									<br>Select which sections you want your document to have</h4>
+								</div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+                </div>
+		<hr>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2" id="sidebar">
+                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+                       <li class="active">
+                            <a href="index"> Step 1: Select template</a>
+                        </li>
+                        <li>
+                            <a href="metadata"> Step 2: Load metadata</a>
+                        </li>
+                        <li>
+                            <a href="sections"> Step 3: Load sections</a>
+                        </li>
+                        <li>
+                            <a href="finish"> Step 4: Finish</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/span-->
+                <div class="span10" id="content">
+					
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="block-content collapse in">
+                                <div class="span12">
+										<form class="form-vertical">
+											<fieldset>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType1" name="include" value="abstract">
+												  <label class="control-label" for="input1">Include Abstract Section</label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType2" name="include" value="introduction">
+												  <label class="control-label" for="input2">Include Introduction Section</label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType3" name="include" value="overview">
+												  <label class="control-label" for="input3">Include Overview Section</label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType4" name="include" value="description">
+												  <label class="control-label" for="input4">Include Description Section</label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType5" name="include" value="references">
+												  <label class="control-label" for="input5">Include References Section</label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType6" name="include" value="all">
+												  <label class="control-label" for="input6">Add all sections in a single document</label>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType7" name="include" value="annotation">
+												  <label class="control-label" for="input7">Include Annotation Properties in the document</label>
+												</div>
+											</fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+					
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="block-content collapse in">
+                                <div class="span12">
+										<form class="form-vertical">
+											<fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="input16">Powered by </label>
+												  <a class="lode" href="https://github.com/essepuntato/LODE"><img src="lode.png"></a>
+												</div>
+											</fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+					
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="block-content collapse in">
+                                <div class="span12">
+										<form class="form-vertical">
+											<fieldset>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType8" name="include" value="named">
+												  <label class="control-label" for="input8">Include Named Individuals in the document</label>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType9" name="include" value="impoted">
+												  <label class="control-label" for="input9">Include documentation for imported ontologies</label>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType10" name="include" value="publish">
+												  <label class="control-label" for="input10">Publish the provenance of the vocabulary</label>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType11" name="include" value="htaccess">
+												  <label class="control-label" for="input11">Create an .htaccess file (for ontology publication)</label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Set base path</button>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType12" name="include" value="webvowl">
+												  <label class="control-label" for="input12">Add link to WebVowl visualizationn</label>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType13" name="include" value="log">
+												  <label class="control-label" for="input14">Include change log from last version</label>
+												</div>
+												<div class="control-group">
+												  <input type="checkbox" id="includeType15" name="include" value="serializations">
+												  <label class="control-label" for="input15">Display ontology serializations</label>
+												</div>
+											</fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+					
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="block-content collapse in">
+                                <div class="span12">
+										<form class="form-vertical">
+											<fieldset>
+												<div class="control-group">
+												  <label class="control-label" for="input16">Style: </label>
+												  <input type="radio" id="styleType1" name="style" value="w3c">
+												  <label class="control-label" for="input17">W3C</label>
+												  <input type="radio" id="styleType2" name="style" value="custom">
+												  <label class="control-label" for="input18">Custom</label>
+												</div>
+												<div class="control-group">
+												  <label class="control-label" for="input19">Google analytics code</label>
+												  <input class="input-xlarge focused" id="input20" type="text" value="">
+												</div>
+											</fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+				</div>
+			</div>
+            <hr>
+            <footer style="float:left;">
+                <a> Select the sections you want your document to have.<br>
+					If you have a section you want to load, click on the "Load” button.<br>
+					The diagram of the ontology will be created on the "images" folder of the documentation.
+				</a>
+            </footer>
+            <footer style="float:right;">
+				<button data-dismiss="modal" class="btn" onclick="window.location.href='metadata'">Back <</button>
+				<button data-dismiss="modal" class="btn btn-primary" onclick="window.location.href='finish'">Generate! ></button>
+				<button data-dismiss="modal" class="btn" onclick="window.location.href='finish'">Cancel</button>
+            </footer>
+        </div>
+        <!--/.fluid-container-->
+        <!-- TODO:Use Bootstrp script here-->
+    </body>
+
+</html>
