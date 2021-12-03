@@ -64,24 +64,18 @@
                     <p>Choose the type of template you want to create and where to save it</p>
                 </div>
                 <div class="input__container"> 
-                    <div class="selection newB">
-							<div class="descriptionTitle"><p>Create template documentation from ontology file</p></div> 
-							<input type="text" placeholder="document Path">		
-                    </div>					
-                    <div class="selection newB">
-							<div class="descriptionTitle"><p>Create template documentation from ontology URL</p></div> 
-							<input type="text" placeholder="Insert here the URL of the vocabulary">
-                    </div>					
-                    <div class="selection newB">
-							<div class="descriptionTitle"><p>Create empty skeleton</p></div> 
-                    </div>
+					<div class="descriptionTitle"><p><input type="radio" id="templateType1" name="template" value="file"> Create template documentation from ontology file</p></div> 
+					<input type="text" placeholder="document Path">
+					<div class="descriptionTitle"><p><input type="radio" id="templateType2" name="template" value="url"> Create template documentation from ontology URL</p></div> 
+					<input type="text" placeholder="Insert here the URL of the vocabulary">				
+					<div class="descriptionTitle"><p><input type="radio" id="templateType3" name="template" value="empty"> Create empty skeleton</p></div> 
 				</div>
 				<div class="input__container"> 
 							<label class="name">Project name</label>
-							<input class="text">							
+							<input class="text">
 							<label class="name">Project export location</label>
 							
-							<div class="buttons"><input class="text" placeholder="C:\Users\FilePlace\myDocumentation" disabled=""><a class="nxt__btn" onclick="">Browse</a>
+							<div class="buttons"><input class="text" placeholder="C:\Users\FilePlace\myDocumentation" disabled=""><a class="nxt__btn" onclick="">Browse</a></div>
 				</div>
 				<div class="input__container"> 
 							<a class="nxt__btn" onclick="window.location.href='finish'"> Next</a> 

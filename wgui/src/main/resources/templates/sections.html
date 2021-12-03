@@ -5,8 +5,9 @@
         <title>Widoco</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <!-- Bootstrap -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="styles.css" rel="stylesheet" media="screen">   
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
 		<script src="html5shiv/html5shiv.min.js"></script>
@@ -20,6 +21,8 @@
                     <div class="row-fluid">
                         <!-- block -->
                         <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                            </div>
                             <div class="block-content collapse in">
                                 <div class="span4" style="float:left;">
 									<a href="#"><img src="brand.png"></a>
@@ -58,42 +61,44 @@
                     <div class="row-fluid">
                         <!-- block -->
                         <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                            </div>
                             <div class="block-content collapse in">
-                                <div class="span12">
+                                <div class="span8">
 										<form class="form-vertical">
 											<fieldset>
 												<div class="control-group">
-												  <input type="checkbox" id="includeType1" name="include" value="abstract">
-												  <label class="control-label" for="input1">Include Abstract Section</label>
-												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												  <input type="checkbox" id="includeType1" name="include" value="abstract" style="float:left;">
+												  <label class="control-label" for="input1" style="float:left;"> Include Abstract Section </label>
+												  <button data-dismiss="modal" class="btn style="float:left;"" onclick="window.location.href='#'">Load</button>
 												</div>
 												<div class="control-group">
-												  <input type="checkbox" id="includeType2" name="include" value="introduction">
-												  <label class="control-label" for="input2">Include Introduction Section</label>
-												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												  <input type="checkbox" id="includeType2" name="include" value="introduction" style="float:left;">
+												  <label class="control-label" for="input2" style="float:left;"> Include Introduction Section </label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'" style="float:left;">Load</button>
 												</div>
 												<div class="control-group">
-												  <input type="checkbox" id="includeType3" name="include" value="overview">
-												  <label class="control-label" for="input3">Include Overview Section</label>
-												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												  <input type="checkbox" id="includeType3" name="include" value="overview" style="float:left;">
+												  <label class="control-label" for="input3" style="float:left;"> Include Overview Section </label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'" style="float:left;">Load</button>
 												</div>
 												<div class="control-group">
-												  <input type="checkbox" id="includeType4" name="include" value="description">
-												  <label class="control-label" for="input4">Include Description Section</label>
-												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												  <input type="checkbox" id="includeType4" name="include" value="description" style="float:left;">
+												  <label class="control-label" for="input4" style="float:left;"> Include Description Section </label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'" style="float:left;">Load</button>
 												</div>
 												<div class="control-group">
-												  <input type="checkbox" id="includeType5" name="include" value="references">
-												  <label class="control-label" for="input5">Include References Section</label>
-												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Load</button>
+												  <input type="checkbox" id="includeType5" name="include" value="references" style="float:left;">
+												  <label class="control-label" for="input5" style="float:left;"> Include References Section </label>
+												  <button data-dismiss="modal" class="btn" onclick="window.location.href='#'" style="float:left;">Load</button>
 												</div>
 												<div class="control-group">
-												  <input type="checkbox" id="includeType6" name="include" value="all">
-												  <label class="control-label" for="input6">Add all sections in a single document</label>
+												  <input type="checkbox" id="includeType6" name="include" value="all" style="float:left;">
+												  <label class="control-label" for="input6" style="float:left;"> Add all sections in a single document </label>
 												</div>
 												<div class="control-group">
-												  <input type="checkbox" id="includeType7" name="include" value="annotation">
-												  <label class="control-label" for="input7">Include Annotation Properties in the document</label>
+												  <input type="checkbox" id="includeType7" name="include" value="annotation" style="float:left;">
+												  <label class="control-label" for="input7" style="float:left;"> Include Annotation Properties in the document </label>
 												</div>
 											</fieldset>
                                     </form>
@@ -107,8 +112,10 @@
                     <div class="row-fluid">
                         <!-- block -->
                         <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                            </div>
                             <div class="block-content collapse in">
-                                <div class="span12">
+                                <div class="span4">
 										<form class="form-vertical">
 											<fieldset>
 												<div class="control-group">
@@ -126,6 +133,8 @@
                     <div class="row-fluid">
                         <!-- block -->
                         <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                            </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
 										<form class="form-vertical">
@@ -170,6 +179,8 @@
                     <div class="row-fluid">
                         <!-- block -->
                         <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                            </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
 										<form class="form-vertical">
