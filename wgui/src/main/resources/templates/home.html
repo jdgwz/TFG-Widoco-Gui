@@ -5,8 +5,7 @@
         <title>Widoco</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <!-- Bootstrap -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="saddam.css" rel="stylesheet" media="screen">
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
 		<script src="html5shiv/html5shiv.min.js"></script>
@@ -16,117 +15,160 @@
     </head>
     
     <body>
-                <div class="container-fluid">
-                    <div class="row-fluid">
-                        <!-- block -->
-                        <div class="block">
-                            <div class="block-content collapse in">
-                                <div class="span4" style="float:left;">
-									<a href="#"><img src="brand.png"></a>
-								</div>
-                                <div class="span8" style="float:left;">
-									<h4>Step 1: Select a template.
-									<br>Choose the type of template you want to create and where to save it</h4>
-								</div>
-                            </div>
-                        </div>
-                        <!-- /block -->
-                    </div>
+<div class="form__container">
+    <div class="title__container">
+		<img src="brand.png">
+    </div>
+    <div class="body__container">
+        <div class="left__container">
+            <div class="side__titles">
+						<div class="title__name">
+							<h3>Step 1</h3>
+							<p>Select template</p>
+						</div>
+						<div class="title__name">
+							<h3>Step 2</h3>
+							<p>Load metadata</p>
+						</div>
+						<div class="title__name">
+							<h3>Step 3</h3>
+							<p>Load sections</p>
+						</div>
+						<div class="title__name">
+							<h3>Step 4</h3>
+							<p>Finish</p>
+						</div>
+            </div>
+            <div class="progress__bar__container">
+                <ul>
+                    <li class="active" id="icon1">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </li>
+                    <li id="icon2">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </li>
+                    <li id="icon3">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </li>
+                    <li id="icon4">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right__container">
+            <fieldset id="form1">
+                <div class="sub__title__container ">
+                    <p>Step 1/4</p>
+                    <h2>Select a template</h2>
+                    <p>Choose the type of template you want to create and where to save it</p>
                 </div>
-		<hr>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span2" id="sidebar">
-                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-                       <li class="active">
-                            <a href="index"> Step 1: Select template</a>
-                        </li>
-                        <li>
-                            <a href="metadata"> Step 2: Load metadata</a>
-                        </li>
-                        <li>
-                            <a href="sections"> Step 3: Load sections</a>
-                        </li>
-                        <li>
-                            <a href="finish"> Step 4: Finish</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--/span-->
-                <div class="span10" id="content">
-					
-                    <div class="row-fluid">
-                        <!-- block -->
-                        <div class="block">
-                            <div class="block-content collapse in">
-                                <div class="span12">
-										<form class="form-vertical">
-											<fieldset>
-												<div class="control-group">
-												  <input type="radio" id="templateType1" name="template" value="file">
-												  <label class="control-label" for="input1">Create template documentation from ontology file</label>
-												  <div class="controls">
-													<input class="input-xlarge disabled" id="input1" type="text" placeholder="document Path" disabled="">
-												  </div>
-												</div>
-												<div class="control-group">
-												  <input type="radio" id="templateType2" name="template" value="url">
-												  <label class="control-label" for="input2">Create template documentation from ontology URL</label>
-												  <div class="controls">
-													<input class="input-xlarge disabled" id="input2" type="text" placeholder="Insert here the URL of the vocabulary" disabled="">
-												  </div>
-												</div>
-												<div class="control-group">
-												  <input type="radio" id="templateType3" name="template" value="empty">
-												  <label class="control-label" for="input3">Create empty skeleton</label>
-												</div>
-											</fieldset>
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /block -->
-                    </div>
-					
-                    <div class="row-fluid">
-                        <!-- block -->
-                        <div class="block">
-                            <div class="block-content collapse in">
-                                <div class="span12">
-										<form class="form-horizontal">
-											<fieldset>
-												<div class="control-group">
-												  <label class="control-label" for="input4">Project name</label>
-												  <div class="controls">
-													<input class="input-xlarge focused" id="input4" type="text" value="">
-												  </div>
-												</div>
-												<div class="control-group">
-												  <label class="control-label" for="input5">Project export location</label>
-												  <div class="controls">
-													<input class="input-xlarge disabled" id="input5" type="text" placeholder="C:\Users\FilePlace\myDocumentation" disabled="">
-													<button data-dismiss="modal" class="btn" onclick="window.location.href='#'">Browse</button>
-												  </div>
-												</div>
-											</fieldset>
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /block -->
+                <div class="input__container"> 
+                    <div class="selection newB">
+							<div class="descriptionTitle"><p>Create template documentation from ontology file</p></div> 
+							<input type="text" placeholder="document Path">		
+                    </div>					
+                    <div class="selection newB">
+							<div class="descriptionTitle"><p>Create template documentation from ontology URL</p></div> 
+							<input type="text" placeholder="Insert here the URL of the vocabulary">
+                    </div>					
+                    <div class="selection newB">
+							<div class="descriptionTitle"><p>Create empty skeleton</p></div> 
                     </div>
 				</div>
-			</div>
-            <hr>
-            <footer style="float:right;">
-				<button data-dismiss="modal" class="btn btn-primary" onclick="window.location.href='finish'">Next ></button>
-				<button data-dismiss="modal" class="btn" onclick="window.location.href='finish'">Cancel</button>
-            </footer>
+				<div class="input__container"> 
+							<label class="name">Project name</label>
+							<input class="text">							
+							<label class="name">Project export location</label>
+							
+							<div class="buttons"><input class="text" placeholder="C:\Users\FilePlace\myDocumentation" disabled=""><a class="nxt__btn" onclick="">Browse</a>
+				</div>
+				<div class="input__container"> 
+							<a class="nxt__btn" onclick="window.location.href='finish'"> Next</a> 
+				</div>
+            </fieldset>
+            <fieldset class="active__form" id="form2">
+                <div class="sub__title__container">
+                    <p>Step 2/5</p>
+                    <h2>What best describes you ?</h2>
+                    <p>Please let us know what type of business best describes you as entreprenuer or businessman.</p>
+                </div>
+                <div class="input__container">
+                    <div class="selection newB">
+                        <div class="imoji">
+                            <ion-icon name="happy"></ion-icon>
+                        </div>
+                        <div class="descriptionTitle">
+                            <h3>New Business</h3>
+                            <p>Started trading in last 12 months</p>
+                        </div>
+                    </div>
+                    <div class="selection exitB">
+                        <div class="imoji">
+                            <ion-icon name="business"></ion-icon>
+                        </div>
+                        <div class="descriptionTitle">
+                            <h3>Existing Business</h3>
+                            <p>Have been operating beyond 12 months</p>
+                        </div>
+                    </div>
+                    <div class="buttons"> <a class="prev__btn" onclick="prevForm();">Back</a> <a class="nxt__btn" onclick="nextForm();">Next</a> </div>
+                </div>
+            </fieldset>
+            <fieldset class="active__form" id="form3">
+                <div class="sub__title__container">
+                    <p>Step 3/5</p>
+                    <h2>What service are looking for ?</h2>
+                    <p>Please let us know what type of business best describes you as entreprenuer or businessman.</p>
+                </div>
+                <div class="input__container">
+                    <div class="selection newB">
+                        <div class="imoji">
+                            <ion-icon name="desktop"></ion-icon>
+                        </div>
+                        <div class="descriptionTitle">
+                            <h3>Website Development</h3>
+                            <p>Development of online websites</p>
+                        </div>
+                    </div>
+                    <div class="selection exitB">
+                        <div class="imoji">
+                            <ion-icon name="phone-portrait"></ion-icon>
+                        </div>
+                        <div class="descriptionTitle">
+                            <h3>Development of Mobile App</h3>
+                            <p>Development of android and IOS mobile app</p>
+                        </div>
+                    </div>
+                    <div class="buttons"> <a class="prev__btn" onclick="prevForm();">Back</a> <a class="nxt__btn" onclick="nextForm();">Next</a> </div>
+                </div>
+            </fieldset>
+            <fieldset class="active__form" id="form4">
+                <div class="sub__title__container">
+                    <p>Step 4/5</p>
+                    <h2>Please select your budget</h2>
+                    <p>Please let us know budget for your project so yes are great that we can give the right quote thanks</p>
+                </div>
+                <div class="input__container"> <input type="range" min="10000" max="500000" value="250000" class="slider">
+                    <div class="output__value"> </div>
+                    <div class="buttons"> <a class="prev__btn" onclick="prevForm();">Back</a> <a class="nxt__btn" onclick="nextForm();">Next</a> </div>
+                </div>
+            </fieldset>
+            <fieldset class="active__form" id="form5">
+                <div class="sub__title__container">
+                    <p>Step 5/5</p>
+                    <h2>Complete Submission</h2>
+                    <p>Thanks for completing the form and for your time.Plss enter your email below and submit the form</p>
+                </div>
+                <div class="input__container"> <label for="Email">Enter your email</label> <input type="text">
+                    <div class="buttons"> <a class="prev__btn" onclick="prevForm();">Back</a> <a class="nxt__btn" id="submitBtn" onclick="nextForm();">Next</a> </div>
+                </div>
+            </fieldset>
         </div>
-        <!--/.fluid-container-->
-        <!-- TODO:Use Bootstrp script here-->
+    </div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 
 </html>
